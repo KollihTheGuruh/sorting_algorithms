@@ -1,4 +1,3 @@
-/* bubble_sort.c */
 
 #include <stdio.h>
 
@@ -10,7 +9,7 @@ void swap(int *a, int *b) {
 
 void bubble_sort(int *array, size_t size) {
     int swapped;
-    size_t i, j, k;
+    size_t i, j;
 
     for (i = 0; i < size - 1; i++) {
         swapped = 0;
@@ -22,12 +21,6 @@ void bubble_sort(int *array, size_t size) {
         }
         if (!swapped) /* If no two elements were swapped, the array is already sorted */
             break;
-
-        /* Print the array after each pass */
-        printf("%lu: " ,i);
-        for (k = 0; k < size; k++) {
-            printf("%d ", array[k]);
-        }
-        printf("\n");
     }
 }
+
