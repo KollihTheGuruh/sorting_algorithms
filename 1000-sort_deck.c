@@ -145,7 +145,7 @@ insert = iter->prev;
 }
 }
 
-/* Function: sort_deck
+/** Function: sort_deck
 *  Sorts a deck of cards in ascending order.
 *
 *  deck: A pointer to a pointer of the head node of the deck.

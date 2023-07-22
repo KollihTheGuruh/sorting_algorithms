@@ -4,7 +4,7 @@ void swap_ints(int *a, int *b);
 void max_heapify(int *array, size_t size, size_t base, size_t root);
 void heap_sort(int *array, size_t size);
 
-/* Function: swap_ints
+/** Function: swap_ints
 * -------------------
 * Swaps the values of two integers by using pointers.
 *
@@ -27,9 +27,10 @@ tmp = *a;
 * @base: The base index of the heap (usually 0)
 * @root: The root index of the subtree to be heapified
 *
-* This function maintains the max heap property of a binary heap represented as an
-* integer array. It ensures that the value at the 'root' index is greater than or
-* equal to its children's values. If it's not, the function recursively swaps the
+* function maintains the max heap property of a binary heap represented as an
+* integer array. It ensures the value at the 'root' index is greater than or
+* equal to its children's values. 
+* If it's not, the function recursively swaps the
 * root with its largest child and calls itself on the child's index to preserve
 * the max heap property throughout the affected subtree.
 *
@@ -56,7 +57,7 @@ max_heapify(array, size, base, large);
 }
 }
 
-/* heap_sort -Sorts an array using the heap sort algorithm.
+/** heap_sort -Sorts an array using the heap sort algorithm.
 * The function takes an integer array and its size as input.
 * The original array will be sorted in ascending order.
 * Uses the heap data structure to efficiently sort the elements.
