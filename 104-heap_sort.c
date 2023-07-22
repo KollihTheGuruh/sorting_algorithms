@@ -1,16 +1,11 @@
 #include "sort.h"
 
-void swap_ints(int *a, int *b);
-void max_heapify(int *array, size_t size, size_t base, size_t root);
-void heap_sort(int *array, size_t size);
-
-/** Function: swap_ints
-* -------------------
-* Swaps the values of two integers by using pointers.
-*
-* a: Pointer to the first integer.
-* b: Pointer to the second integer.
-*/
+/**
+ * swap_ints - Swaps the values of two integers.
+ *
+ * @a: Pointer to the first integer.
+ * @b: Pointer to the second integer.
+ */
 void swap_ints(int *a, int *b)
 {
 int tmp;
@@ -21,21 +16,14 @@ tmp = *a;
 }
 
 /**
-* max_heapify - Maintains max heap property for a subtree rooted at 'root'
-* @array: Pointer to the integer array representing the heap
-* @size: The total number of elements in the array
-* @base: The base index of the heap (usually 0)
-* @root: The root index of the subtree to be heapified
-*
-* function maintains the max heap property of a binary heap represented as an
-* integer array. It ensures the value at the 'root' index is greater than or
-* equal to its children's values. 
-* If it's not, the function recursively swaps the
-* root with its largest child and calls itself on the child's index to preserve
-* the max heap property throughout the affected subtree.
-*
-* Note: The array is 0-based indexed.
-*/
+ * max_heapify - Rearranges elements in the array to maintain
+ * the max heap property.
+ *
+ * @array: Pointer to the array representing the binary heap.
+ * @size: Number of elements in the array.
+ * @base: Base index of the subarray to consider for max heapify.
+ * @root: Index of the root node of the subarray.
+ */
 void max_heapify(int *array, size_t size, size_t base, size_t root)
 {
 size_t left, right, large;
@@ -57,17 +45,12 @@ max_heapify(array, size, base, large);
 }
 }
 
-/** heap_sort -Sorts an array using the heap sort algorithm.
-* The function takes an integer array and its size as input.
-* The original array will be sorted in ascending order.
-* Uses the heap data structure to efficiently sort the elements.
-* Time complexity: O(n log n)
-*
-* @param array: Pointer to the integer array to be sorted.
-* @param size: The number of elements in the array.
-* Description: Implements the sift-down heap sort
-* algorithm. Prints the array after each swap.
-*/
+/**
+ * heap_sort - Sorts an array of integers in ascending order using Heap Sort.
+ *
+ * @array: Pointer to the array to be sorted.
+ * @size: Number of elements in the array.
+ */
 void heap_sort(int *array, size_t size)
 {
 int i;
