@@ -1,18 +1,20 @@
 #include "sort.h"
 
-void swap_node_ahead(listint_t **list, listint_t **tail, listint_t **shaker);
-void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker);
-void cocktail_sort_list(listint_t **list);
 
 /**
- * swap_node_ahead - Swaps two nodes in a doubly linked list.
+ * swap_node_ahead - Swaps the node after the tail with the
+ * tail in a doubly linked list.
+ *
  * @list: Double pointer to the head of the list.
  * @tail: Double pointer to the tail of the list.
  * @shaker: Double pointer to the node after the tail to be swapped.
  *
- * This function swaps the node after the tail with the tail node in a
- * doubly linked list. It updates the next and prev pointers of the nodes
- * and the head and tail pointers if needed.
+ * This function swaps the node after the tail with the tail in a
+ * doubly linked list.
+ * It updates the necessary pointers to maintain the doubly
+ * linked list structure.
+ * If the shaker is the last node, nothing happens (no swap).
+ * After swapping, the tail pointer will be updated to point to the new tail.
  */
 
 void swap_node_ahead(listint_t **list, listint_t **tail, listint_t **shaker)
@@ -35,15 +37,21 @@ void swap_node_ahead(listint_t **list, listint_t **tail, listint_t **shaker)
 }
 
 /**
- * swap_node_behind - Swaps two nodes in a doubly linked list.
+ * swap_node_behind - Swaps the node
+ * after the tail with the tail in a doubly linked list.
+ *
  * @list: Double pointer to the head of the list.
  * @tail: Double pointer to the tail of the list.
- * @shaker: Double pointer to the node before the tail to be swapped.
+ * @shaker: Double pointer to the node after the tail to be swapped.
  *
- * This function swaps the tail node with the node before the tail in a
- * doubly linked list. It updates the next and prev pointers of the nodes
- * and the head and tail pointers if needed.
+ * This function swaps the node after the tail with the tail
+ * in a doubly linked list.
+ * It updates the necessary pointers to maintain the
+ * doubly linked list structure.
+ * If the shaker is the last node, nothing happens (no swap).
+ * After swapping, the tail pointer will be updated to point to the new tail.
  */
+
 void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker)
 {
 	listint_t *tmp = (*shaker)->prev;
@@ -64,15 +72,21 @@ void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker)
 }
 
 /**
- * swap_nodes - Swaps two nodes in a doubly linked list
- * @h: Pointer to the head of the list
- * @n1: Pointer to the first node to swap
- * @n2: Pointer to the second node to swap
+ * cocktail_sort_list - Sorts a doubly linked list
+ * of integers in ascending order
+ *                      using the Cocktail shaker sort algorithm.
  *
- * This function swaps two nodes in a doubly linked list. It updates the
- * next and prev pointers of the nodes and the head of the list if needed.
+ * @list: Double pointer to the head of the list.
+ *
+ * This function implements the Cocktail shaker sort algorithm
+ * to sort a doubly linked list of integers
+ * in ascending order. It repeatedly swaps adjacent nodes in both
+ * directions (left to right and right to left)
+ * until the list becomes sorted.
+ * The tail pointer is used to optimize the
+ * algorithm. The tail pointer points to the last swapped element
+ * on each pass, reducing the number of unnecessary comparisons.
  */
-
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *tail, *shaker;
