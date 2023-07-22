@@ -1,11 +1,11 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swaps the values of two integers.
- *
- * @a: Pointer to the first integer.
- * @b: Pointer to the second integer.
- */
+* swap_ints - Swaps the values of two integers.
+*
+* @a: Pointer to the first integer.
+* @b: Pointer to the second integer.
+*/
 
 void swap_ints(int *a, int *b)
 {
@@ -17,15 +17,15 @@ tmp = *a;
 }
 
 /**
- * hoare_partition - Partitions the array using the Hoare partition scheme.
- *
- * @array: Pointer to the array to be partitioned.
- * @size: Number of elements in the array.
- * @left: Starting index of the partition.
- * @right: Ending index of the partition.
- *
- * Return: Index of the pivot element after partitioning.
- */
+* hoare_partition - Partitions the array using the Hoare partition scheme.
+*
+* @array: Pointer to the array to be partitioned.
+* @size: Number of elements in the array.
+* @left: Starting index of the partition.
+* @right: Ending index of the partition.
+*
+* Return: Index of the pivot element after partitioning.
+*/
 
 int hoare_partition(int *array, size_t size, int left, int right)
 {

@@ -50,6 +50,7 @@ print_array(subarr + front, back - front);
 }
 
 /**
+<<<<<<< HEAD
  * merge_sort_recursive - Recursively sorts a subarray using Merge Sort.
  *
  * @subarr: Pointer to the original array.
@@ -57,6 +58,14 @@ print_array(subarr + front, back - front);
  * @front: Index of the front of the subarray.
  * @back: Index of the back of the subarray.
  */
+=======
+* merge_sort_recursive- Recursively sorts a subarray using merge sort algorithm
+* @subarr: Pointer to the beginning of the subarray.
+* @buff: Temporary buffer for merging.
+* @front: Index of the first element in the subarray.
+* @back: Index of the last element in the subarray.
+*/
+>>>>>>> ddd0b34b00ee6edc7aa6f4349e46aee778a7b77c
 void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back)
 {
 size_t mid;
