@@ -1,18 +1,12 @@
 #include "sort.h"
 
-void swap_ints(int *a, int *b);
-int hoare_partition(int *array, size_t size, int left, int right);
-void hoare_sort(int *array, size_t size, int left, int right);
-void quick_sort_hoare(int *array, size_t size);
+/**
+ * swap_ints - Swaps the values of two integers.
+ *
+ * @a: Pointer to the first integer.
+ * @b: Pointer to the second integer.
+ */
 
-/*
-* swap_ints - Swaps the values of two integers using pointers.
-* @a: Pointer to the first integer.
-* @b: Pointer to the second integer.
-* Description: This function takes two integer
-* pointers as input and swaps the values
-* of the integers they point to.
-*/
 void swap_ints(int *a, int *b)
 {
 int tmp;
@@ -22,21 +16,17 @@ tmp = *a;
 *b = tmp;
 }
 
-/*
-* hoare_partition - Performs Hoare partitioning on an array segment.
-* @array: Pointer to the array to be partitioned.
-* @size: Size of the array.
-* @left: Index of the leftmost element of the segment to partition.
-* @right: Index of the rightmost element of the segment to partition.
-* Description: The Hoare partition scheme is a
-* popular algorithm used in various
-* sorting and searching algorithms. It selects a pivot element and
-* rearranges the array in such a way that all elements less than or
-* equal to the pivot come before it and all elements greater than
-* the pivot come after it. This function returns the index of the pivot
-* element after the partitioning process.
-* Return: The index of the pivot element after partitioning.
-*/
+/**
+ * hoare_partition - Partitions the array using the Hoare partition scheme.
+ *
+ * @array: Pointer to the array to be partitioned.
+ * @size: Number of elements in the array.
+ * @left: Starting index of the partition.
+ * @right: Ending index of the partition.
+ *
+ * Return: Index of the pivot element after partitioning.
+ */
+
 int hoare_partition(int *array, size_t size, int left, int right)
 {
 int pivot, above, below;
