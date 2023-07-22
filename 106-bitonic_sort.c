@@ -61,14 +61,14 @@ return (above);
 }
 
 /**
- * hoare_sort - Sorts an array of integers using the Quick Sort algorithm
- *              with the Hoare partition scheme.
- *
- * @array: Pointer to the array to be sorted.
- * @size: Number of elements in the array.
- * @left: Starting index of the partition.
- * @right: Ending index of the partition.
- */
+* hoare_sort - Sorts an array of integers using the Quick Sort algorithm
+*              with the Hoare partition scheme.
+*
+* @array: Pointer to the array to be sorted.
+* @size: Number of elements in the array.
+* @left: Starting index of the partition.
+* @right: Ending index of the partition.
+*/
 void hoare_sort(int *array, size_t size, int left, int right)
 {
 int part;
@@ -82,12 +82,12 @@ hoare_sort(array, size, part, right);
 }
 
 /**
- * quick_sort_hoare - Sorts an array of integers in ascending order using the
- *                    Quick Sort algorithm with the Hoare partition scheme.
- *
- * @array: Pointer to the array to be sorted.
- * @size: Number of elements in the array.
- */
+* quick_sort_hoare - Sorts an array of integers in ascending order using the
+*                    Quick Sort algorithm with the Hoare partition scheme.
+*
+* @array: Pointer to the array to be sorted.
+* @size: Number of elements in the array.
+*/
 void quick_sort_hoare(int *array, size_t size)
 {
 if (array == NULL || size < 2)

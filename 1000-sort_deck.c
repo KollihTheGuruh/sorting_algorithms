@@ -77,12 +77,12 @@ return (12);
 return (13);
 }
 
-/** Function: insertion_sort_deck_kind
+/**
+* Function: insertion_sort_deck_kind
 * Sorts a deck of cards based on their kind using the insertion sort algorithm
 * This function takes a double pointer to the head of the deck,
 * which allows modifying
 * the deck by rearranging the nodes during the sorting process.
-*
 * deck: A double pointer to the head of the deck.
 */
 void insertion_sort_deck_kind(deck_node_t **deck)
@@ -145,7 +145,8 @@ insert = iter->prev;
 }
 }
 
-/** Function: sort_deck
+/**
+* Function: sort_deck
 *  Sorts a deck of cards in ascending order.
 *
 *  deck: A pointer to a pointer of the head node of the deck.

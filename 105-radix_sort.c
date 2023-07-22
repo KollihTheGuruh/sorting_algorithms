@@ -1,13 +1,13 @@
 #include "sort.h"
 
 /**
- * get_max - Finds the maximum element in an array of integers.
- *
- * @array: Pointer to the array.
- * @size: Number of elements in the array.
- *
- * Return: The maximum element in the array.
- */
+* get_max - Finds the maximum element in an array of integers.
+*
+* @array: Pointer to the array.
+* @size: Number of elements in the array.
+*
+* Return: The maximum element in the array.
+*/
 int get_max(int *array, int size)
 {
 int max, i;
@@ -22,15 +22,15 @@ return (max);
 }
 
 /**
- * radix_counting_sort - Performs counting sort based on a specific significant
- *                       digit of each element in the array.
- *
- * @array: Pointer to the array to be sorted.
- * @size: Number of elements in the array.
- * @sig: The significant digit to sort by (1 for least significant,
- * 10 for next significant, etc.).
- * @buff: Pointer to the buffer to store the sorted output.
- */
+* radix_counting_sort - Performs counting sort based on a specific significant
+*                       digit of each element in the array.
+*
+* @array: Pointer to the array to be sorted.
+* @size: Number of elements in the array.
+* @sig: The significant digit to sort by (1 for least significant,
+* 10 for next significant, etc.).
+* @buff: Pointer to the buffer to store the sorted output.
+*/
 void radix_counting_sort(int *array, size_t size, int sig, int *buff)
 {
 int count[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -53,11 +53,11 @@ array[i] = buff[i];
 }
 
 /**
- * radix_sort - Sorts an array of integers in ascending order using Radix sort.
- *
- * @array: Pointer to the array to be sorted.
- * @size: Number of elements in the array.
- */
+* radix_sort - Sorts an array of integers in ascending order using Radix sort.
+*
+* @array: Pointer to the array to be sorted.
+* @size: Number of elements in the array.
+*/
 void radix_sort(int *array, size_t size)
 {
 int max, sig, *buff;

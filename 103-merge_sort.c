@@ -49,8 +49,8 @@ printf("[Done]: ");
 print_array(subarr + front, back - front);
 }
 
-/*
-* merge_sort_recursive - Recursively sorts a subarray using merge sort algorithm.
+/**
+* merge_sort_recursive- Recursively sorts a subarray using merge sort algorithm
 * @subarr: Pointer to the beginning of the subarray.
 * @buff: Temporary buffer for merging.
 * @front: Index of the first element in the subarray.
