@@ -78,6 +78,7 @@ return (13);
 }
 
 /**
+<<<<<<< HEAD
 * Function: insertion_sort_deck_kind
 * Sorts a deck of cards based on their kind using the insertion sort algorithm
 * This function takes a double pointer to the head of the deck,
@@ -85,6 +86,13 @@ return (13);
 * the deck by rearranging the nodes during the sorting process.
 * deck: A double pointer to the head of the deck.
 */
+=======
+ * insertion_sort_deck_kind - Sorts a deck of cards in ascending
+ * order based on the kind attribute.
+ *
+ * @deck: Pointer to a pointer to the head of the deck.
+ */
+>>>>>>> a0512daa63a88bcf3bd65cba2927e5b7e77f4602
 void insertion_sort_deck_kind(deck_node_t **deck)
 {
 deck_node_t *iter, *insert, *tmp;
@@ -146,6 +154,7 @@ insert = iter->prev;
 }
 
 /**
+<<<<<<< HEAD
 * Function: sort_deck
 *  Sorts a deck of cards in ascending order.
 *
@@ -164,6 +173,12 @@ insert = iter->prev;
 *  - The deck is assumed to contain valid card information and nodes.
 *  - The sorting algorithm used here is C90-compliant.
 */
+=======
+ * sort_deck - Sorts a deck of cards in ascending order using Bubble sort.
+ *
+ * @deck: Pointer to a pointer to the head of the deck.
+ */
+>>>>>>> a0512daa63a88bcf3bd65cba2927e5b7e77f4602
 void sort_deck(deck_node_t **deck)
 {
 if (deck == NULL || *deck == NULL || (*deck)->next == NULL)
